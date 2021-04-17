@@ -1,17 +1,14 @@
 import React, { useState } from 'react'
 import './ExpenseItem.css'
 
-const ExpenseItem = () => {
-  const [item, setItem] = useState('Food')
-  const [amount, setAmount] = useState('12.99')
-  const date = new Date(2021, 3, 16)
-
+const ExpenseItem = ({ title, amount, date, id }) => {
+  console.log(title)
   return (
     <div className='expense-item'>
-      <div>{date.toDateString()}</div>
+      <div>{date}</div>
       <div className='expense-item__description'>
-        <h2>{item}</h2>
-        <div className='expense-item__price'>${parseFloat(amount)}</div>
+        <h2>{title}</h2>
+        <div className='expense-item__price'>${amount}</div>
       </div>
     </div>
   )
