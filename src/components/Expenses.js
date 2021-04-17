@@ -1,9 +1,11 @@
 import React from 'react'
 import ExpenseItem from './ExpenseItem'
+import './Expenses.css'
 
 const Expenses = ({ expenses }) => {
   return (
-    <div>
+    <div className='expenses'>
+      <h1>YOLO</h1>
       <ExpenseItem
         id={expenses[0].id}
         title={expenses[0].title}
