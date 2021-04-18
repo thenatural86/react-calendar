@@ -11,8 +11,6 @@ const Expenses = ({ expenses }) => {
     setFilteredYear(filteredYear)
   }
 
-  console.log(filteredYear)
-
   return (
     <div>
       <div className='expenses'>
@@ -20,7 +18,6 @@ const Expenses = ({ expenses }) => {
           onYearFilter={yearFilterHandler}
           selected={filteredYear}
         />
-        <h1>YOLO</h1>
         <ExpenseItem
           id={expenses[0].id}
           title={expenses[0].title}
