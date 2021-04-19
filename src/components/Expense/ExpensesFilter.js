@@ -2,9 +2,9 @@ import './ExpensesFilter.css'
 
 const ExpensesFilter = (props) => {
   const dropDownHandler = (e) => {
-    props.onYearFilter(e.target.value)
+    props.onYearFilter(e.target.value, props.expenses)
   }
-
+  // console.log(props.expenses)
   return (
     <div className='expenses-filter'>
       <div className='expenses-filter__control'>
