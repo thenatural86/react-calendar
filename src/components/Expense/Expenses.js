@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import ExpensesFilter from './ExpensesFilter'
+import ExpensesList from './ExpensesList'
+import ExpensesChart from './ExpensesChart'
 
 import './Expenses.css'
-import ExpensesList from './ExpensesList'
 
 const Expenses = ({ expenses }) => {
   const [filteredYear, setFilteredYear] = useState('2021')
@@ -23,6 +24,7 @@ const Expenses = ({ expenses }) => {
           selected={filteredYear}
           expenses={expenses}
         />
+        <ExpensesChart expenses={filterExpenses} />
         <ExpensesList expenses={filterExpenses} />
       </div>
     </div>
